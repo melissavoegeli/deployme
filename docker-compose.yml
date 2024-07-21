@@ -1,0 +1,11 @@
+services:
+  webserver:
+    image: "nginx:latest"
+    ports:
+      - "3001:3001"
+    environment:
+      - NGINX_HOST=melissavoegeli.com
+      - NGINX_PORT=3001
+    volumes:
+      - $PWD/app:/var/www
+      - $PWD/templates:/etc/nginx/templates
